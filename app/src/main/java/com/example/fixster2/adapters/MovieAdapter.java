@@ -1,6 +1,10 @@
 package com.example.fixster2.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +17,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
+import com.example.fixster2.DetailActivity;
+import com.example.fixster2.MainActivity;
 import com.example.fixster2.R;
 import com.example.fixster2.models.Movie;
 
@@ -26,13 +33,19 @@ import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 // which describes and provides access to all the views within each item row.
 public class MovieAdapter extends  RecyclerView.Adapter<MovieAdapter.ViewHolder>{
 
+    public interface OnClickListener{
+        void onItemClicked(int position);
+    }
+
     Context context;
     List<Movie> movies;
+    OnClickListener clickListener;
 
     // Constructor for a movie adapter that receives the context of the view(? and list of movie objects
-    public MovieAdapter(Context context, List<Movie> movies){
+    public MovieAdapter(Context context, List<Movie> movies, OnClickListener clickListener){
         this.context = context;
         this.movies = movies;
+        this.clickListener = clickListener;
     }
 
     //Usually involves inflating a layout from XML and returning the holder.
@@ -69,7 +82,6 @@ public class MovieAdapter extends  RecyclerView.Adapter<MovieAdapter.ViewHolder>
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-
         // Variables that will save the view/UI Components
 
         TextView tvTitle;
@@ -89,9 +101,26 @@ public class MovieAdapter extends  RecyclerView.Adapter<MovieAdapter.ViewHolder>
         public void bind(Movie movie) {
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
-            int radius = 10;
-            int margin = 0;
-            Glide.with(context).load(movie.getPosterPath()).into(ivPoster);
+            String imageURL;
+            int placeholder;
+            // if phone is in landscape then imageURL = backdropImage
+            if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+                imageURL = movie.getBackdropPath();
+                placeholder = R.drawable.flicks_backdrop_placeholder;
+            } else {
+                imageURL = movie.getPosterPath();
+                placeholder = R.drawable.flicks_movie_placeholder;
+            }
+            //else imageURL = poster image
+            Glide.with(context).load(imageURL).placeholder(placeholder).into(ivPoster);
+
+            ivPoster.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    clickListener.onItemClicked(getAdapterPosition());
+                }
+            });
+
         }
     }
 }
