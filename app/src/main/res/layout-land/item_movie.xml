@@ -11,7 +11,9 @@
         android:layout_marginStart="14dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="14dp"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="#E6171E27"
+        app:cardCornerRadius="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,6 +49,7 @@
                     android:layout_marginEnd="62dp"
                     android:layout_toEndOf="@+id/ivPoster"
                     android:fontFamily="@font/comfortaa_bold"
+                    android:textColor="#FFFFFF"
                     android:textSize="24sp"
                     tools:text="A Quiet Place Part II" />
 
@@ -60,6 +63,7 @@
                     android:layout_toEndOf="@+id/ivPoster"
                     android:fontFamily="@font/comfortaa_light"
                     android:text="TextView"
+                    android:textColor="#FFFFFF"
                     android:textSize="14sp"
                     tools:text="Following the events at home, the Abbott family now face the terrors of the outside world. Forced to venture into the unknown, they realize that the creatures that hunt by sound are not the only threats that lurk beyond the sand path." />
 

@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <!--<com.google.android.material.card.MaterialCardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="608dp"
@@ -36,7 +36,42 @@
 
 
 
-        ]]></com.google.android.material.card.MaterialCardView>-->
+
+
+        ]]></com.google.android.material.card.MaterialCardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Trailer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="-2dp"
+        android:translationZ="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/overDet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="13dp"
+                android:fontFamily="@font/comfortaa_light"
+                android:scrollbarAlwaysDrawVerticalTrack="false"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:translationZ="1dp"
+                tools:text="Following the events at home, the Abbott family now face the terrors of the outside world. Forced to venture into the unknown, they realize that the creatures that hunt by sound are not the only threats that lurk beyond the sand path." />
+        </LinearLayout>
+    </ScrollView>
 
     <ImageView
         android:id="@+id/posterV"
@@ -52,13 +87,16 @@
         android:id="@+id/ratingMov"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/titleDet"
+        android:layout_below="@+id/dateDet"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="21dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:layout_toEndOf="@+id/posterV"
-        android:rating="5" />
+        android:numStars="5"
+        android:rating="5"
+        android:stepSize="0.5"
+        android:translationZ="1dp" />
 
     <TextView
         android:id="@+id/titleDet"
@@ -70,25 +108,59 @@
         android:layout_marginTop="2dp"
         android:layout_marginEnd="22dp"
         android:layout_toEndOf="@+id/posterV"
-        android:fontFamily="@font/comfortaa_bold"
+        android:fontFamily="@font/days_one"
         android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:translationZ="1dp"
         tools:text="A Quiet Place Part II" />
 
     <TextView
-        android:id="@+id/overDet"
+        android:id="@+id/dateDet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleDet"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="7dp"
+        android:layout_toEndOf="@+id/posterV"
+        android:fontFamily="@font/comfortaa_light"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:translationZ="1dp"
+        tools:text="2021-05-21" />
+
+    <TextView
+        android:id="@+id/votesDet"
+        android:layout_width="68dp"
+        android:layout_height="28dp"
+        android:layout_above="@+id/ratingMov"
+        android:layout_below="@+id/titleDet"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="3dp"
+        android:layout_toEndOf="@+id/dateDet"
+        android:fontFamily="@font/comfortaa_light"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:translationZ="1dp"
+        tools:text="437 votes" />
+
+    <TextView
+        android:id="@+id/Trailer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ratingMov"
-        android:layout_alignParentStart="false"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="20dp"
-        android:fontFamily="@font/comfortaa_light"
-        android:scrollbarAlwaysDrawVerticalTrack="false"
-        android:textAlignment="center"
-        tools:text="Following the events at home, the Abbott family now face the terrors of the outside world. Forced to venture into the unknown, they realize that the creatures that hunt by sound are not the only threats that lurk beyond the sand path." />
+        android:layout_marginTop="19dp"
+        android:autoLink="web"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:translationZ="1dp"
+        tools:text="Trailer" />
 
 
 </RelativeLayout>

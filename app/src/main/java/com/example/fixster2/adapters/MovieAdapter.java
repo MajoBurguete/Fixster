@@ -21,6 +21,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.fixster2.DetailActivity;
 import com.example.fixster2.MainActivity;
 import com.example.fixster2.R;
+import com.example.fixster2.databinding.ItemMovieBinding;
 import com.example.fixster2.models.Movie;
 
 import org.jetbrains.annotations.NotNull;
@@ -55,9 +56,10 @@ public class MovieAdapter extends  RecyclerView.Adapter<MovieAdapter.ViewHolder>
     @NotNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) { // Returns a ViewHolder that contains the UI components  in the item_movie.xml
-        Log.d("MovieAdapter", "OnCreateViewHolder");
+        ItemMovieBinding binding = ItemMovieBinding.inflate(LayoutInflater.from(context), parent, false);
         // Creates the view object that contains the UI Components (item_movie xml)
-        View movieView = LayoutInflater.from(context).inflate(R.layout.item_movie, parent, false);
+        View movieView = binding.getRoot();
+       /* View movieView = LayoutInflater.from(context).inflate(R.layout.item_movie, parent, false);*/
         // Converts the view into a view holder
         return new ViewHolder(movieView);
     }
@@ -112,7 +114,7 @@ public class MovieAdapter extends  RecyclerView.Adapter<MovieAdapter.ViewHolder>
                 placeholder = R.drawable.flicks_movie_placeholder;
             }
             //else imageURL = poster image
-            Glide.with(context).load(imageURL).placeholder(placeholder).into(ivPoster);
+            Glide.with(context).load(imageURL).placeholder(placeholder).transform(new RoundedCorners(50)).into(ivPoster);
 
             ivPoster.setOnClickListener(new View.OnClickListener() {
                 @Override

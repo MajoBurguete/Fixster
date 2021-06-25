@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="#E6171E27"
+    android:gravity="center"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbars="vertical"
+    tools:context=".DetailActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/titleDet"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toEndOf="@+id/ratingMov"
+        android:paddingTop="0dp"
+        android:paddingBottom="10dp"
+        app:cardBackgroundColor="#E6171E27"
+        app:cardCornerRadius="20dp"><![CDATA[>
+
+
+
+
+
+        ]]>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="134dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-6dp"
+            android:layout_marginEnd="0dp"
+            android:translationZ="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/overDet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="13dp"
+                    android:fontFamily="@font/comfortaa_light"
+                    android:scrollbarAlwaysDrawVerticalTrack="false"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:translationZ="1dp"
+                    tools:text="Following the events at home, the Abbott family now face the terrors of the outside world. Forced to venture into the unknown, they realize that the creatures that hunt by sound are not the only threats that lurk beyond the sand path." />
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/posterV"
+        android:layout_width="116dp"
+        android:layout_height="177dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="43dp"
+        android:translationZ="1dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <RatingBar
+        android:id="@+id/ratingMov"
+        style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateDet"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="25dp"
+        android:layout_toEndOf="@+id/posterV"
+        android:max="5"
+        android:numStars="5"
+        android:rating="5"
+        android:stepSize="0.5"
+        android:translationZ="1dp" />
+
+    <TextView
+        android:id="@+id/titleDet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="31dp"
+        android:layout_toEndOf="@+id/posterV"
+        android:fontFamily="@font/days_one"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:translationZ="1dp"
+        tools:text="A Quiet Place Part II" />
+
+    <TextView
+        android:id="@+id/dateDet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleDet"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="26dp"
+        android:layout_toEndOf="@+id/posterV"
+        android:fontFamily="@font/comfortaa_light"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:translationZ="1dp"
+        tools:text="2021-05-21" />
+
+    <TextView
+        android:id="@+id/votesDet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ratingMov"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toEndOf="@+id/dateDet"
+        android:fontFamily="@font/comfortaa_light"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:translationZ="1dp"
+        tools:text="437 votes" />
+
+    <TextView
+        android:id="@+id/Trailer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingMov"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="323dp"
+        android:layout_marginTop="74dp"
+        android:autoLink="web"
+        android:fontFamily="@font/comfortaa_bold"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:translationZ="1dp"
+        tools:text="Trailer" />
+
+
+</RelativeLayout>
