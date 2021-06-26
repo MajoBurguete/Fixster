@@ -37,7 +37,7 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I'm still trying to understand completly the recycler view but this project actually helped me to have everything clearer. I had a few issues with the scroll view and making everything look in place with the margins and all of that but at the end i sorted it out and i really like the result. I was afraid at first because this is my first time using android studio and coding in java but i think i just have to practice. 
 
 ## Open-source libraries used
 
