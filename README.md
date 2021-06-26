@@ -13,30 +13,30 @@ The following **required** functionality is completed:
 * [x] For each movie displayed, user can see the following details:
   * [x] Title, Poster Image, Overview (Portrait mode)
   * [x] Title, Backdrop Image, Overview (Landscape mode)
-* [ ] Allow user to view details of the movie including ratings within a separate activity
+* [x] Allow user to view details of the movie including ratings within a separate activity
 
 The following **stretch** features are implemented:
 
 * [x] Improved the user interface by experimenting with styling and coloring.
-* [ ] Apply rounded corners for the poster or background images using [Glide transformations](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#transformations)
-* [ ] Apply the popular [View Binding annotation library](http://guides.codepath.org/android/Reducing-View-Boilerplate-with-ViewBinding) to reduce boilerplate code.
+* [x] Apply rounded corners for the poster or background images using [Glide transformations](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#transformations)
+* [x] Apply the popular [View Binding annotation library](http://guides.codepath.org/android/Reducing-View-Boilerplate-with-ViewBinding) to reduce boilerplate code.
 * [ ] Allow video trailers to be played in full-screen using the YouTubePlayerView from the details screen.
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [x] Implemented a design systems (Material Design: https://material.io/) 
+* [x] Uses a link to go to the trailer in youtube.
+* [x] Customize icon 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [Kap](https://getkap.co/).
+<img src='https://github.com/MajoBurguete/Fixster/blob/master/Flixster.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I'm still trying to understand completly the recycler view but this project actually helped me to have everything clearer. I had a few issues with the scroll view and making everything look in place with the margins and all of that but at the end i sorted it out and i really like the result. I was afraid at first because this is my first time using android studio and coding in java but i think i just have to practice. 
 
 ## Open-source libraries used
 
