@@ -77,9 +77,8 @@
         android:id="@+id/posterV"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageDetail"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="-180dp"
+        android:layout_marginTop="-20dp"
         android:translationZ="1dp"
         tools:srcCompat="@tools:sample/avatars" />
 
@@ -88,10 +87,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dateDet"
-        android:layout_alignParentEnd="true"
         android:layout_marginStart="21dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="30dp"
         android:layout_toEndOf="@+id/posterV"
         android:numStars="5"
         android:rating="5"
